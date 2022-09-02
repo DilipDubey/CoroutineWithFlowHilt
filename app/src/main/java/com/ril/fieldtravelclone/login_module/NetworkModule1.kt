@@ -1,5 +1,4 @@
 package com.ril.fieldtravelclone.login_module
-import retrofit2.converter.scalars.ScalarsConverterFactory
 
 import android.net.Uri
 import com.ril.fieldtravelclone.BuildConfig
@@ -12,6 +11,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.converter.scalars.ScalarsConverterFactory
 import javax.inject.Singleton
 
 @Module
@@ -36,6 +36,7 @@ object NetworkModule1 {
     fun provideLoggingInterceptor(): HttpLoggingInterceptor {
         return HttpLoggingInterceptor().apply {
             this.level= HttpLoggingInterceptor.Level.BODY
+
         }
     }
 

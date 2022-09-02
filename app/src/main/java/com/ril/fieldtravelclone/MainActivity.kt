@@ -1,14 +1,12 @@
 package com.ril.fieldtravelclone
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.ril.fieldtravelclone.login_module.LoginViewModel1
-import com.ril.fieldtravelclone.login_module.NetworkResult1
-
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -20,12 +18,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        tv_click=findViewById(R.id.tv_click)
+        tv_click = findViewById(R.id.tv_click)
 
         tv_click.setOnClickListener {
-            Log.e("dkd","dkd clicked")
+            Log.e("dkd", "dkd clicked")
             loginViewModel.login()
         }
+
+        println("test")
         //Using livedata
 //        loginViewModel.loginRes.observe(this){
 //            Log.e("dkd","dkd res1-"+it)
